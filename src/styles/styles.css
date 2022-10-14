@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+.nav {
+  background-color: black;
+  text-align: right;
+  padding: 30px;
+}
+.link {
+  margin: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+.footerNav {
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+}
+.footerLink {
+  margin: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+.aboutContainer {
+  background-color: black;
+  text-align: left;
+}
+h1 {
+  color: white;
+  font-size: 50px;
+}

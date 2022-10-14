@@ -1,38 +1,23 @@
-import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap';
-import './style.css';
+import { Navbar, Nav } from 'react-bootstrap';
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { FaEnvelope } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
+
+const link = {color: 'red', fontSize: '30px', margin: '15px'}
+const nav = {backgroundColor: 'black', justifyContent: 'right'}
 
 function IanHeader() {
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        {(loggedIn || loggedInBackup) && Auth.getRole() === 1 ? (<Navbar.Brand href="/adminpanel">
-          <img
-            alt=""
-            src="/images/encanto_logo_nav.png"
-            width="90"
-            height="30"
-            className="d-inline-block align-top"
-          /></Navbar.Brand>) : (
-        <Navbar.Brand href="/">
-          <img
-            alt=""
-            src="/images/encanto_logo_nav.png"
-            width="90"
-            height="30"
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand> )}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
+    <Navbar style={nav}>
+          <Nav >
+            <Nav.Link href="https://www.linkedin.com/in/ian-nicholas-developer/
+" target="blank" style={link}><BsLinkedin /></Nav.Link>
+            <Nav.Link href="https://github.com/iannicholas" target="blank" style={link}><BsGithub /></Nav.Link>
+            <Nav.Link href="mailto:ian.nicholas.webdeveloper@gmail.com" target="blank" style={link}><FaEnvelope /></Nav.Link>
+            <Nav.Link href="https://docs.google.com/document/d/1_doRDVq9zZmeb_vEt0z1FRzE0OCTECxpfiRpNM77CQI/edit?usp=sharing" download target="blank" style={link}><FaFileDownload /></Nav.Link>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
     </Navbar>
   );
 }
